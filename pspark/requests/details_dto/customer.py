@@ -13,4 +13,5 @@ class Customer(AbstractRequest):
     customer_id: Optional[str] = None
     national_id: Optional[str] = None
     taxpayer_identification_number: Optional[str] = None
+    document_type: Optional[str] = None
     birthdate: Optional[str] = None
