@@ -20,7 +20,7 @@ from tests.helper import generate_jwt_key
 class TestAbstractHttpClientWrapper(unittest.TestCase):
     @respx.mock
     def test_http_server_exception(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             return_value=Response(500)
         )
 
@@ -34,7 +34,7 @@ class TestAbstractHttpClientWrapper(unittest.TestCase):
 
     @respx.mock
     def test_http_client_exception(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             return_value=Response(400)
         )
 
@@ -48,7 +48,7 @@ class TestAbstractHttpClientWrapper(unittest.TestCase):
 
     @respx.mock
     def test_http_redirect_exception(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             return_value=Response(300)
         )
 
@@ -62,7 +62,7 @@ class TestAbstractHttpClientWrapper(unittest.TestCase):
 
     @respx.mock
     def test_response_validation_exception(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             return_value=Response(
                 200, json={"code": 1002, "message": "Request Data Error"}
             )
@@ -80,7 +80,7 @@ class TestAbstractHttpClientWrapper(unittest.TestCase):
 
     @respx.mock
     def test_http_timeout_exception(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             side_effect=TimeoutException
         )
 

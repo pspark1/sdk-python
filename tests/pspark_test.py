@@ -21,7 +21,7 @@ from tests.helper import generate_jwt_key
 class TestPSPark(unittest.TestCase):
     @respx.mock
     def test_send_headers(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             return_value=Response(200, json={})
         )
 
@@ -36,7 +36,7 @@ class TestPSPark(unittest.TestCase):
 
     @respx.mock
     def test_get_balances(self):
-        route = respx.post("https://api.pspark.io/v1/balances").mock(
+        route = respx.post("https://api.ppark.io/v1/balances").mock(
             return_value=Response(200, json={"code": 0, "message": "Ok"})
         )
 
@@ -51,7 +51,7 @@ class TestPSPark(unittest.TestCase):
     @respx.mock
     def test_get_balance(self):
         route = respx.post(
-            "https://api.pspark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/balance"
+            "https://api.ppark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/balance"
         ).mock(return_value=Response(200, json={"code": 0, "message": "Ok"}))
 
         sdk = PSPark(jwt_key=generate_jwt_key(), api_key="api_key")
@@ -67,7 +67,7 @@ class TestPSPark(unittest.TestCase):
     @respx.mock
     def test_create_address(self):
         route = respx.post(
-            "https://api.pspark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/address/create"
+            "https://api.ppark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/address/create"
         ).mock(return_value=Response(200, json={"code": 0, "message": "Ok"}))
 
         sdk = PSPark(jwt_key=generate_jwt_key(), api_key="api_key")
@@ -86,7 +86,7 @@ class TestPSPark(unittest.TestCase):
     @respx.mock
     def test_create_withdrawal(self):
         route = respx.post(
-            "https://api.pspark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/withdrawal/create"
+            "https://api.ppark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/withdrawal/create"
         ).mock(return_value=Response(200, json={"code": 0, "message": "Ok"}))
 
         sdk = PSPark(jwt_key=generate_jwt_key(), api_key="api_key")
@@ -107,7 +107,7 @@ class TestPSPark(unittest.TestCase):
     @respx.mock
     def test_create_invoice(self):
         route = respx.post(
-            "https://api.pspark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/invoice/create"
+            "https://api.ppark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/invoice/create"
         ).mock(return_value=Response(200, json={"code": 0, "message": "Ok"}))
 
         sdk = PSPark(jwt_key=generate_jwt_key(), api_key="api_key")
@@ -128,7 +128,7 @@ class TestPSPark(unittest.TestCase):
     @respx.mock
     def test_get_transaction_status(self):
         route = respx.post(
-            "https://api.pspark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/transaction/status"
+            "https://api.ppark.io/v1/wallet/79CDA5A3-C688-4996-8D20-3EDDF4E/transaction/status"
         ).mock(return_value=Response(200, json={"code": 0, "message": "Ok"}))
 
         sdk = PSPark(jwt_key=generate_jwt_key(), api_key="api_key")
@@ -146,7 +146,7 @@ class TestPSPark(unittest.TestCase):
 
     @respx.mock
     def test_get_rates(self):
-        route = respx.post("https://api.pspark.io/v1/rates").mock(
+        route = respx.post("https://api.ppark.io/v1/rates").mock(
             return_value=Response(200, json={"code": 0, "message": "Ok"})
         )
 

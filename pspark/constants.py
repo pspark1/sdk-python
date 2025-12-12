@@ -1,4 +1,4 @@
-BASE_URL = "https://api.pspark.io"
+BASE_URL = "https://api.ppark.io"
 REQUEST_TIMEOUT = 60.0
 
 DEBUG_MODE_OPTION = "debug_mode"

@@ -10,7 +10,7 @@ A Certificate Signing Request (.csr) file is required to authenticate an API use
 openssl req -new -newkey rsa:4096 -nodes -keyout pspakr_secret.key -out pspark_public_key.csr
 ```
 
-Make sure you keep the API secret key (**pspark_secret.key**) safe and secure. Do not share your API secret key with anyone. To get your API-key you should upload your pspark_public_key in the [cabinet.pspark.io](https://cabinet.pspark.io).
+Make sure you keep the API secret key (**pspark_secret.key**) safe and secure. Do not share your API secret key with anyone. To get your API-key you should upload your pspark_public_key in the [cabinet.ppark.io](https://cabinet.ppark.io).
 
 ## Installation
 
