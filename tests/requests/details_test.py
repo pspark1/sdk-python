@@ -8,6 +8,7 @@ from pspark.requests.details_dto import (
     Crypto,
     Customer,
     EscrowPayment,
+    Payway,
     Ui,
     WebData,
 )
@@ -30,6 +31,7 @@ class TestDetails(unittest.TestCase):
             web_data=WebData(user_agent="Firefox"),
             card_data=CardData("4111111111111111"),
             project=Project("https://example.com"),
+            payway=Payway(pwid="NGN-CARD-YIO1KO"),
         )
 
         self.assertEqual(
@@ -48,6 +50,7 @@ class TestDetails(unittest.TestCase):
                 "web_data": {"user_agent": "Firefox"},
                 "card_data": {"number": "4111111111111111"},
                 "project": {"url": "https://example.com"},
+                "payway": {"pwid": "NGN-CARD-YIO1KO"},
             },
         )
 

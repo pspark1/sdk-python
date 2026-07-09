@@ -9,6 +9,7 @@ from .details_dto import (
     Crypto,
     Customer,
     EscrowPayment,
+    Payway,
     Ui,
     WebData,
 )
@@ -26,3 +27,4 @@ class Details(AbstractRequest):
     web_data: Optional[WebData] = None
     card_data: Optional[CardData] = None
     project: Optional[Project] = None
+    payway: Optional[Payway] = None

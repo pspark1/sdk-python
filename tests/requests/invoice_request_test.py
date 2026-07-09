@@ -8,6 +8,7 @@ from pspark.requests.details_dto import (
     Crypto,
     Customer,
     EscrowPayment,
+    Payway,
     Ui,
     WebData,
 )
@@ -68,6 +69,7 @@ class TestInvoiceRequest(unittest.TestCase):
                 "/;q=0.8",
             ),
             card_data=CardData("4111111111111111"),
+            payway=Payway(pwid="NGN-CARD-YIO1KO"),
         )
 
         dto = InvoiceRequest(
@@ -135,6 +137,7 @@ class TestInvoiceRequest(unittest.TestCase):
                         "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like "
                         "Gecko) Chrome/51.0.2704.103 Safari/537.36",
                     },
+                    "payway": {"pwid": "NGN-CARD-YIO1KO"},
                 },
                 "nonce": 1,
                 "reference": "uuid",

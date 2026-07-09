@@ -4,5 +4,6 @@ from .card_data import CardData
 from .crypto import Crypto
 from .customer import Customer
 from .escrow_payment import EscrowPayment
+from .payway import Payway
 from .ui import Ui
 from .web_data import WebData
