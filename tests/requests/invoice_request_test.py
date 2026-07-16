@@ -24,6 +24,7 @@ class TestInvoiceRequest(unittest.TestCase):
                 customer_id="customer id",
                 national_id="1234566789",
                 taxpayer_identification_number="23456-33224",
+                document_type="CPF",
                 birthdate="1985-07-24",
             ),
             billing_info=BillingInfo(
@@ -117,6 +118,7 @@ class TestInvoiceRequest(unittest.TestCase):
                         "national_id": "1234566789",
                         "phone": "phone",
                         "taxpayer_identification_number": "23456-33224",
+                        "document_type": "CPF",
                     },
                     "escrow_payment": {"payment_wallet_id": "uuid"},
                     "ui": {"language": "en"},
