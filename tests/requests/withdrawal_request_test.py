@@ -25,6 +25,7 @@ class TestWithdrawalRequest(unittest.TestCase):
                 customer_id="customer id",
                 national_id="1234566789",
                 taxpayer_identification_number="23456-33224",
+                document_type="CNPJ",
                 birthdate="1985-07-24",
             ),
             billing_info=BillingInfo(
@@ -117,6 +118,7 @@ class TestWithdrawalRequest(unittest.TestCase):
                         "national_id": "1234566789",
                         "phone": "phone",
                         "taxpayer_identification_number": "23456-33224",
+                        "document_type": "CNPJ",
                     },
                     "escrow_payment": {"payment_wallet_id": "uuid"},
                     "ui": {"language": "en"},
